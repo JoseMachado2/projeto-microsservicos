@@ -1,0 +1,15 @@
+#pasta resources: contém arquivos que o Spring precisa em tempo de execução, como:application.yml; application.properties; configurações; scripts SQL;templates
+
+#application.yml: Arquivo de configuração da aplicação Spring Boot.
+  # Define propriedades da aplicação como: porta do servidor ; configurações do Eureka ; comportamento dos clientes Eureka
+  # Essas configurações são carregadas automaticamente pelo Spring Boot quando a aplicação inicia através do SpringApplication.run().
+
+
+server:          
+  port: 8761     # - Define em qual porta o servidor web vai rodar.
+
+eureka:          #
+  client:
+    register-with-eureka: false   #Por estar 'false', significa que este servidor Eureka NÃO deve se registrar em outro Eureka
+    fetch-registry: false         #Por estar 'false', significa não buscar registro de serviços de outro servidor Eureka
+

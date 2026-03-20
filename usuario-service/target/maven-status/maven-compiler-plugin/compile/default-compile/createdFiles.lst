@@ -1,0 +1,8 @@
+com\exemplo\usuario\entity\Usuario.class
+com\exemplo\usuario\repository\UsuarioRepository.class
+com\exemplo\usuario\mapper\UsuarioMapper.class
+com\exemplo\usuario\service\UsuarioService.class
+com\exemplo\usuario\controller\UsuarioController.class
+com\exemplo\usuario\dto\UsuarioDTO.class
+com\exemplo\usuario\UsuarioApplication.class
+com\exemplo\usuario\mapper\UsuarioMapperImpl.class
