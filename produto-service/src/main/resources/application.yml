@@ -1,0 +1,32 @@
+#Arquivo de configuração da aplicação Spring Boot do produto-service.
+  #Define propriedades da aplicação como: nome do serviço ; porta do servidor ; configuração do banco de dados ; conexão com o servidor Eureka
+  #Essas configurações são carregadas automaticamente quandoa aplicação é iniciada.
+
+spring:
+  application:
+    name: produto-service # nome do serviço registrado no Eureka
+    
+  datasource:  # configuração do banco de dados (MySQL)
+    url: jdbc:mysql://localhost:3306/produto_db
+    username: root
+    password: 1234
+
+  jpa:  # configuração do Hibernate/JPA
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+  flyway:
+    enabled: true  
+
+server:
+  port: 8082
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/ # endereço do servidor Eureka
+
+
+      

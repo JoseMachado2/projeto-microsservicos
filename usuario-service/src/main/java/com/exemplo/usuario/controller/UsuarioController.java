@@ -38,8 +38,18 @@ public class UsuarioController {
         return service.listarUsuarios();
     }
 
+    @GetMapping("/{id}")
+    public UsuarioDTO buscarPorId(@PathVariable Long id) {
+        return service.buscarPorId(id);
+    }
+
     @PostMapping
     public UsuarioDTO criarUsuario(@RequestBody UsuarioDTO usuarioDTO) {
         return service.salvarUsuario(usuarioDTO);
+    }
+
+    @DeleteMapping
+    public void deletarUsuario(@RequestBody Long id) {
+        service.deletarUsuario(id);
     }
 }

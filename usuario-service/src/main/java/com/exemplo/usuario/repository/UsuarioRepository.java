@@ -11,6 +11,7 @@ Função:
 import com.exemplo.usuario.entity.Usuario;  /* Ele importa Usuario porque ele precisa saber qual entidade ele gerencia */
 /* Spring Data JPA gera o CRUD automaticamente. */
 import org.springframework.data.jpa.repository.JpaRepository;
+
 /*Herda de JpaRepository, que disponibiliza métodos prontos como:
 save()     -> salvar entidade
 findAll()  -> listar registros

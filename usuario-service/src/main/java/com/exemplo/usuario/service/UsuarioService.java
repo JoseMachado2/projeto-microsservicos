@@ -34,9 +34,21 @@ public class UsuarioService {
                 .collect(Collectors.toList());
     }
 
+    public UsuarioDTO buscarPorId(Long id) {
+        Usuario usuario = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+
+        return mapper.toDTO(usuario);
+    }
+
     public UsuarioDTO salvarUsuario(UsuarioDTO usuarioDTO) {
         Usuario usuario = mapper.toEntity(usuarioDTO);
         Usuario salvo = repository.save(usuario);
         return mapper.toDTO(salvo);
+    }
+
+    public void deletarUsuario(Long id) {
+        repository.deleteById(id);
+
     }
 }
