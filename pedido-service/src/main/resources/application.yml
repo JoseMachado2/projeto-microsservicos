@@ -1,4 +1,4 @@
-#Arquivo de configuração da aplicação Spring Boot do pedido-service.
+#Arquivo de configuração da aplicação Spring Boot do usuario-service.
   #Define propriedades da aplicação como: nome do serviço ; porta do servidor ; configuração do banco de dados ; conexão com o servidor Eureka
   #Essas configurações são carregadas automaticamente quandoa aplicação é iniciada.
 
@@ -6,13 +6,14 @@ spring:
   application:
     name: pedido-service # nome do serviço registrado no Eureka
     
-  datasource:  # configuração do banco de dados (MySQL)
-    url: jdbc:mysql://localhost:3306/pedido_db
-    username: root
-    password: 1234
+  datasource:  # configuração do banco de dados (Oracle)
+    url: jdbc:oracle:thin:@localhost:1521/XEPDB1
+    username: pedido_db
+    password: 123
+    driver-class-name: oracle.jdbc.OracleDriver
 
   jpa:  # configuração do Hibernate/JPA
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.OracleDialect
     hibernate:
       ddl-auto: none
     show-sql: true

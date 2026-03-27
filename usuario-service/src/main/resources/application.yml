@@ -6,13 +6,14 @@ spring:
   application:
     name: usuario-service # nome do serviço registrado no Eureka
     
-  datasource:  # configuração do banco de dados (MySQL)
-    url: jdbc:mysql://localhost:3306/usuario_db
-    username: root
-    password: 1234
+  datasource:  # configuração do banco de dados (Oracle)
+    url: jdbc:oracle:thin:@localhost:1521/XEPDB1
+    username: usuario_db
+    password: 123
+    driver-class-name: oracle.jdbc.OracleDriver
 
   jpa:  # configuração do Hibernate/JPA
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.OracleDialect
     hibernate:
       ddl-auto: none
     show-sql: true
