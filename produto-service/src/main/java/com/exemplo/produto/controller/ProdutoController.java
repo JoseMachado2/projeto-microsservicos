@@ -47,4 +47,9 @@ public class ProdutoController {
     public ProdutoDTO buscarPorId(@PathVariable Long id) {
         return service.buscarPorId(id);
     }
+
+    @DeleteMapping
+    public void deletarProduto(@RequestBody Long id){
+        service.deletarProduto(id);
+    }
 }

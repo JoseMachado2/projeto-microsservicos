@@ -5,7 +5,12 @@
 spring:
   application:
     name: produto-service # nome do serviço registrado no Eureka
-    
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+      
   datasource:  # configuração do banco de dados (Oracle)
     url: jdbc:oracle:thin:@localhost:1521/XEPDB1
     username: produto_db
@@ -28,6 +33,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/ # endereço do servidor Eureka
+
 
 
       

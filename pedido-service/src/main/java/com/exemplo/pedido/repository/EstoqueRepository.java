@@ -1,0 +1,5 @@
+package com.exemplo.pedido.repository;
+import com.exemplo.pedido.entity.Estoque;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EstoqueRepository extends JpaRepository<Estoque, Long> {}

@@ -47,7 +47,7 @@ public class UsuarioService {
         return mapper.toDTO(salvo);
     }
 
-    public void deletarUsuario(Long id) {
+     public void deletarUsuario(Long id) {
         repository.deleteById(id);
 
     }

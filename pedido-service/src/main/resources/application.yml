@@ -5,7 +5,12 @@
 spring:
   application:
     name: pedido-service # nome do serviço registrado no Eureka
-    
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+      
   datasource:  # configuração do banco de dados (Oracle)
     url: jdbc:oracle:thin:@localhost:1521/XEPDB1
     username: pedido_db

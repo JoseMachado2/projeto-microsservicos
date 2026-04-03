@@ -48,8 +48,9 @@ public class UsuarioController {
         return service.salvarUsuario(usuarioDTO);
     }
 
-    @DeleteMapping
-    public void deletarUsuario(@RequestBody Long id) {
+   
+    @DeleteMapping("/{id}")  // ← ADICIONADO /{id} na URL
+    public void deletarUsuario(@PathVariable Long id) {  // ← @PathVariable em vez de @RequestBody
         service.deletarUsuario(id);
     }
 }

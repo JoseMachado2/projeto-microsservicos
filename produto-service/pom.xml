@@ -67,6 +67,11 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <version>1.5.5.Final</version>
     <scope>provided</scope>
 </dependency>
+<!-- RabbitMQ -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-amqp</artifactId>
+</dependency>
 </dependencies>
 
 <dependencyManagement>
